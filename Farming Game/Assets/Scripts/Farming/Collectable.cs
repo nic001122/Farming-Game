@@ -6,13 +6,15 @@ public class Collectable : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        Player player = collision.GetComponent<Player>();
+
+        
+        if (player)
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                Debug.Log("Hello");
-                Destroy(gameObject);
-            }
+            player.numBeetrootSeed = player.numBeetrootSeed+1;
+            Destroy(this.gameObject);
         }
+        
+        
     }
 }
