@@ -7190,11 +7190,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  sr: {fileID: 0}
-  sWest: {fileID: 0}
-  sEast: {fileID: 0}
-  sNorth: {fileID: 0}
-  sSouth: {fileID: 0}
+  sr: {fileID: 1632651411}
+  sWest: {fileID: 21300000, guid: 79df84a0f5edd904cb41691fffd826fc, type: 3}
+  sEast: {fileID: 21300000, guid: 79df84a0f5edd904cb41691fffd826fc, type: 3}
+  sNorth: {fileID: 21300000, guid: 79df84a0f5edd904cb41691fffd826fc, type: 3}
+  sSouth: {fileID: 21300000, guid: 79df84a0f5edd904cb41691fffd826fc, type: 3}
   sprintKey: 306
   sprint: 0
   baseMoveSpeed: 3

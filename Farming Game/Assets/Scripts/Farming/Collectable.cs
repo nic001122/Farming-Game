@@ -10,6 +10,7 @@ public class Collectable : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                Debug.Log("Hello");
                 Destroy(gameObject);
             }
         }
