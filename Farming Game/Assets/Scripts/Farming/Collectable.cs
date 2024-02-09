@@ -4,17 +4,43 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Player player = collision.GetComponent<Player>();
+    int numBeetrootSeed;
 
-        
-        if (player)
+    bool inRange = false;
+
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.E))
         {
-            player.numBeetrootSeed = player.numBeetrootSeed+1;
-            Destroy(this.gameObject);
+            if(inRange)
+            {
+                PickUp();
+            }
         }
-        
-        
+    }
+
+    private void PickUp()
+    {
+        Destroy(gameObject);
+        if(gameObject.CompareTag("Beetroot Seed"))
+        {
+            numBeetrootSeed += 1;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    { 
+        if(collision.CompareTag("Player"))
+        {
+            inRange = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Player"))
+        {
+            inRange = false;
+        }
     }
 }

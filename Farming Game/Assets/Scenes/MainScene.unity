@@ -583,7 +583,7 @@ GameObject:
   - component: {fileID: 1022719051}
   m_Layer: 0
   m_Name: Beetroot Seed
-  m_TagString: Untagged
+  m_TagString: Beetroot Seed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7333,7 +7333,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35633963f1a54614696ef8830b2bd115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numBeetrootSeed: 0
 --- !u!1 &2096295702
 GameObject:
   m_ObjectHideFlags: 0
