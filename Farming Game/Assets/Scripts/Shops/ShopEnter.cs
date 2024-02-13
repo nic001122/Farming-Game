@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ShopEnter : MonoBehaviour
 {
-    bool inRange;
     public GameObject shop;
+    public GameObject shopBg;
     public GameObject BuyButton;
     public GameObject SellButton;
 
@@ -13,7 +13,6 @@ public class ShopEnter : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            inRange = true;
             shop.SetActive(true);
         }
     }
@@ -22,7 +21,6 @@ public class ShopEnter : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            inRange = false;
             shop.SetActive(false);
         }
     }
