@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Collectable : MonoBehaviour
 {
-    int numBeetrootSeed;
+    public CounterText cntrTxt;
 
     bool inRange = false;
 
@@ -24,7 +24,7 @@ public class Collectable : MonoBehaviour
         Destroy(gameObject);
         if(gameObject.CompareTag("Beetroot Seed"))
         {
-            numBeetrootSeed += 1;
+            cntrTxt.beetrootSeeds += 1;
         }
     }
 
