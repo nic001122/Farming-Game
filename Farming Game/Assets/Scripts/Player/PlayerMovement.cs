@@ -9,7 +9,8 @@ public class PlayerMovement : MonoBehaviour
 {
     float steerAmount;
     float moveAmount;
-
+    [SerializeField] Rigidbody2D rb;
+    private Vector3 direction;
 
     public float moveSpeed;
 
@@ -54,10 +55,15 @@ public class PlayerMovement : MonoBehaviour
             moveSpeed = baseMoveSpeed;
         }
 
+        
         // Movement
-        float steerAmount = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
-        float moveAmount = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
-        transform.Translate(steerAmount, moveAmount, 0);
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
+        var moveVector = new Vector3(horizontal, vertical, 0);
+
+        //direction = new Vector3(horizontal, vertical);
+        rb.MovePosition(new Vector2((transform.position.x + moveVector.x * moveSpeed * Time.deltaTime), transform.position.y + moveVector.y * moveSpeed * Time.deltaTime));
+        
 
         if(steerAmount > 0)
         {
@@ -102,5 +108,11 @@ public class PlayerMovement : MonoBehaviour
 
             sr.sprite = sSouth;
         }
+    }
+
+
+    private void FixedUpdate()
+    {
+        //this.transform.position += direction * moveSpeed * Time.deltaTime;
     }
 }
