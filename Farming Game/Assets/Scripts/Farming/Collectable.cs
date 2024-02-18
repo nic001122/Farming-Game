@@ -10,13 +10,13 @@ public class Collectable : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E))
+      
+       
+        if(inRange)
         {
-            if(inRange)
-            {
-                PickUp();
-            }
+            PickUp();
         }
+        
     }
 
     private void PickUp()

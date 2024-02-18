@@ -7,6 +7,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public float horizontal;
+    public float vertical;
+    
+
     float steerAmount;
     float moveAmount;
     [SerializeField] Rigidbody2D rb;
@@ -59,10 +63,10 @@ public class PlayerMovement : MonoBehaviour
         // Movement
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        var moveVector = new Vector3(horizontal, vertical, 0);
+        //var moveVector = new Vector3(horizontal, vertical, 0);
 
-        //direction = new Vector3(horizontal, vertical);
-        rb.MovePosition(new Vector2((transform.position.x + moveVector.x * moveSpeed * Time.deltaTime), transform.position.y + moveVector.y * moveSpeed * Time.deltaTime));
+        direction = new Vector3(horizontal, vertical);
+        
         
 
         if(steerAmount > 0)
@@ -113,6 +117,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //this.transform.position += direction * moveSpeed * Time.deltaTime;
+        //rb.MovePosition(new Vector2((transform.position.x + moveVector.x * moveSpeed * Time.deltaTime), transform.position.y + moveVector.y * moveSpeed * Time.deltaTime));
+        this.transform.position += direction * moveSpeed * Time.deltaTime;
     }
 }
