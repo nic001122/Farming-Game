@@ -52,17 +52,17 @@ public class ShopController : MonoBehaviour
 
     public void SellBeetrootSeeds()
     {
-        if(beetrootSellAmount <= cntrText.beetrootSeeds && cntrText.beetrootSeeds > 0)
-        {
-            cntrText.beetrootSeeds -= beetrootSellAmount;
-            cntrText.money += beetrootSellAmount * beetrootValue;
-            notEnoughBeetrootSeedsText.SetActive(false);
-        }
+        //if(beetrootSellAmount <= cntrText.beetrootSeeds && cntrText.beetrootSeeds > 0)
+        //{
+            //cntrText.beetrootSeeds -= beetrootSellAmount;
+            //cntrText.money += beetrootSellAmount * beetrootValue;
+            //notEnoughBeetrootSeedsText.SetActive(false);
+        //}
 
-        else
-        {
-            notEnoughBeetrootSeedsText.SetActive(true);
-        }
+        //else
+        //{
+            //notEnoughBeetrootSeedsText.SetActive(true);
+        //}
     }
 
     public void Update()
