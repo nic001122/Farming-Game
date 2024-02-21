@@ -11237,7 +11237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryPanel: {fileID: 1479180480}
-  player: {fileID: 0}
+  player: {fileID: 1632651417}
   slots: []
 --- !u!1001 &1697083485
 PrefabInstance:
