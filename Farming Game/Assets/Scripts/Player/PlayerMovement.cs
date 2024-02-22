@@ -13,8 +13,8 @@ public class PlayerMovement : MonoBehaviour
 
     float steerAmount;
     float moveAmount;
-    [SerializeField] Rigidbody2D rb;
-    private Vector3 direction;
+    public Rigidbody2D rb;
+    private Vector2 movement;
 
     public float moveSpeed;
 
@@ -61,10 +61,9 @@ public class PlayerMovement : MonoBehaviour
 
         
         // Movement
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
 
-        direction = new Vector3(horizontal, vertical);
         //transform.position += direction * moveSpeed * Time.deltaTime;
         //var moveVector = new Vector3(horizontal, vertical, 0);
 
@@ -116,8 +115,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //rb.MovePosition(new Vector2((transform.position.x + moveVector.x * moveSpeed * Time.deltaTime), transform.position.y + moveVector.y * moveSpeed * Time.deltaTime));
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
         //this.transform.position += direction * moveSpeed * Time.deltaTime;
-        transform.position += direction * moveSpeed * Time.deltaTime;
+        //transform.position += direction * moveSpeed * Time.deltaTime;
     }
 }
