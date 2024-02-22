@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class Inventory_UI : MonoBehaviour
 {
@@ -18,9 +20,10 @@ public class Inventory_UI : MonoBehaviour
             ToggleInventory();
         }
     }
+
     public void ToggleInventory()
     {
-        if (!inventoryPanel.activeSelf)
+        if(!inventoryPanel.activeSelf)
         {
             inventoryPanel.SetActive(true);
             Setup();

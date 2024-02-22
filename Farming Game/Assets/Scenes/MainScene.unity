@@ -1522,7 +1522,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &445697532
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10539,7 +10539,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1479180481
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10573,7 +10573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 540ff58d1374c3f4f9f8cb73cd2de611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryPanel: {fileID: 1479180480}
+  inventoryPanel: {fileID: 445697531}
   player: {fileID: 1632651417}
   slots:
   - {fileID: 907182211}
@@ -11009,7 +11009,6 @@ GameObject:
   - component: {fileID: 1632651415}
   - component: {fileID: 1632651416}
   - component: {fileID: 1632651417}
-  - component: {fileID: 1632651418}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -11224,21 +11223,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory:
     slots: []
---- !u!114 &1632651418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1632651408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 540ff58d1374c3f4f9f8cb73cd2de611, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryPanel: {fileID: 1479180480}
-  player: {fileID: 1632651417}
-  slots: []
 --- !u!1001 &1697083485
 PrefabInstance:
   m_ObjectHideFlags: 0

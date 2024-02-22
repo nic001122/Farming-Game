@@ -116,4 +116,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   cntrTxt: {fileID: 0}
-  player: {fileID: 0}
+  icon: {fileID: 21300000, guid: 8feb77eefdb11284fab2fa53b9974fcf, type: 3}
