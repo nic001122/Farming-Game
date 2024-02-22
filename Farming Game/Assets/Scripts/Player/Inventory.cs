@@ -22,12 +22,7 @@ public class Inventory
         }
         public bool CanAddItem()
         {
-            if (count < maxAllowed)
-            {
-                return true;
-            }
-            
-            return false;
+            return count < maxAllowed;
         }
         public void AddItem(Collectable item)
         {
