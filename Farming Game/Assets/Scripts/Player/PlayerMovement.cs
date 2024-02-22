@@ -61,13 +61,12 @@ public class PlayerMovement : MonoBehaviour
 
         
         // Movement
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
-        //var moveVector = new Vector3(horizontal, vertical, 0);
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
 
         direction = new Vector3(horizontal, vertical);
-        
-        
+        //transform.position += direction * moveSpeed * Time.deltaTime;
+        //var moveVector = new Vector3(horizontal, vertical, 0);
 
         if(steerAmount > 0)
         {
@@ -118,6 +117,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         //rb.MovePosition(new Vector2((transform.position.x + moveVector.x * moveSpeed * Time.deltaTime), transform.position.y + moveVector.y * moveSpeed * Time.deltaTime));
-        this.transform.position += direction * moveSpeed * Time.deltaTime;
+        //this.transform.position += direction * moveSpeed * Time.deltaTime;
+        transform.position += direction * moveSpeed * Time.deltaTime;
     }
 }
