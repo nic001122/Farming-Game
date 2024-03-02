@@ -35,9 +35,13 @@ public class PlayerMovement : MonoBehaviour
     public float baseMoveSpeed;
     public float sprintMoveSpeed;
 
+    public Vector2 currentPos;
+    public Vector2 lastPos;
+
     // Update is called once per frame
     void Update()
     {
+        currentPos = gameObject.transform.position;
         // Sprint
         if(Input.GetKeyDown(sprintKey) && sprint)
         {
@@ -67,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
         //transform.position += direction * moveSpeed * Time.deltaTime;
         //var moveVector = new Vector3(horizontal, vertical, 0);
 
-        if(steerAmount > 0)
+        if(currentPos.x > lastPos.x)
         {
             westLook = false;
             northLook = false;
@@ -78,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
             sr.sprite = sEast;
         }
 
-        if(steerAmount < 0)
+        if(currentPos.x < lastPos.x)
         {
             eastLook = false;
             northLook = false;
@@ -89,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
             sr.sprite = sWest;
         }
 
-        if(moveAmount > 0)
+        if(currentPos.y > lastPos.y)
         {
             westLook = false;
             eastLook = false;
@@ -100,7 +104,7 @@ public class PlayerMovement : MonoBehaviour
             sr.sprite = sNorth;
         }
 
-        if(moveAmount < 0)
+        if(currentPos.y < lastPos.y)
         {
             westLook = false;
             eastLook = false;
@@ -110,6 +114,8 @@ public class PlayerMovement : MonoBehaviour
 
             sr.sprite = sSouth;
         }
+
+        lastPos = currentPos;
     }
 
 
