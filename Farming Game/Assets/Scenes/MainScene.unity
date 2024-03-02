@@ -11033,14 +11033,16 @@ MonoBehaviour:
   rb: {fileID: 1632651413}
   moveSpeed: 2e+9
   sr: {fileID: 1632651411}
-  sWest: {fileID: 21300000, guid: 79df84a0f5edd904cb41691fffd826fc, type: 3}
-  sEast: {fileID: 21300000, guid: 79df84a0f5edd904cb41691fffd826fc, type: 3}
-  sNorth: {fileID: 21300000, guid: 79df84a0f5edd904cb41691fffd826fc, type: 3}
-  sSouth: {fileID: 21300000, guid: 79df84a0f5edd904cb41691fffd826fc, type: 3}
+  sWest: {fileID: 21300000, guid: 79ac2c3ad1861af44bff51df558fe75f, type: 3}
+  sEast: {fileID: 21300000, guid: 2a7345775e2964a47a5ff6e155175e63, type: 3}
+  sNorth: {fileID: 21300000, guid: 61394925e20d6564bb2161d0477f5c4a, type: 3}
+  sSouth: {fileID: 21300000, guid: 2f1a7cfa947419942ae5f9088d0cbf22, type: 3}
   sprintKey: 306
   sprint: 0
   baseMoveSpeed: 3
   sprintMoveSpeed: 6
+  currentPos: {x: 0, y: 0}
+  lastPos: {x: 0, y: 0}
 --- !u!70 &1632651410
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -11098,8 +11100,8 @@ SpriteRenderer:
   m_SortingLayerID: -581731243
   m_SortingLayer: 2
   m_SortingOrder: 15
-  m_Sprite: {fileID: 21300000, guid: 79df84a0f5edd904cb41691fffd826fc, type: 3}
-  m_Color: {r: 0.88235295, g: 0.88235295, b: 0.078431375, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 2f1a7cfa947419942ae5f9088d0cbf22, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -11164,7 +11166,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 1}
+    oldSize: {x: 1, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
