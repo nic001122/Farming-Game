@@ -14,6 +14,8 @@ public class ShopEnter : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             shop.SetActive(true);
+            BuyButton.SetActive(true);
+            SellButton.SetActive(true);
         }
     }
 

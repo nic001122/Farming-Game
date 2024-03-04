@@ -48,6 +48,10 @@ public class ShopController : MonoBehaviour
         openUpMenu.SetActive(true);
         sellMenu.SetActive(false);
         buyMenu.SetActive(false);
+        shopEnter.BuyButton.SetActive(true);
+        shopEnter.SellButton.SetActive(true);
+
+        shopEnter.shopBg.transform.localScale = new Vector2 (0.5100411f, 0.1867f);
     }
 
     public void SellBeetrootSeeds()
@@ -63,6 +67,11 @@ public class ShopController : MonoBehaviour
         //{
             //notEnoughBeetrootSeedsText.SetActive(true);
         //}
+    }
+
+    public void BuyBeetrootSeeds()
+    {
+        
     }
 
     public void Update()
