@@ -115,6 +115,37 @@ public class PlayerMovement : MonoBehaviour
             sr.sprite = sSouth;
         }
 
+        
+        if(currentPos.x > lastPos.x)
+        {
+            if(currentPos.y > lastPos.y || currentPos.y < lastPos.y)
+            {
+                westLook = false;
+                northLook = false;
+                southLook = false;
+
+                eastLook = true;
+
+                sr.sprite = sEast;
+            }
+        }
+
+        if(currentPos.x < lastPos.x)
+        {
+            if(currentPos.y > lastPos.y || currentPos.y < lastPos.y)
+            {
+                westLook = false;
+                northLook = false;
+                southLook = false;
+
+                eastLook = true;
+
+                sr.sprite = sWest;
+            }
+        }
+
+
+
         lastPos = currentPos;
     }
 

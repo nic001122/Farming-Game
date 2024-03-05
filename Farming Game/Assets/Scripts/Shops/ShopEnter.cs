@@ -9,6 +9,8 @@ public class ShopEnter : MonoBehaviour
     public GameObject BuyButton;
     public GameObject SellButton;
 
+    public ShopController shopController;
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
@@ -16,6 +18,10 @@ public class ShopEnter : MonoBehaviour
             shop.SetActive(true);
             BuyButton.SetActive(true);
             SellButton.SetActive(true);
+            shopController.buyMenu.SetActive(false);
+            shopController.sellMenu.SetActive(false);
+
+            shopBg.transform.localScale = new Vector2(0.5100411f, 0.1867f);
         }
     }
 

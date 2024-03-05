@@ -3529,6 +3529,7 @@ MonoBehaviour:
   shopBg: {fileID: 2075817169}
   BuyButton: {fileID: 140038064}
   SellButton: {fileID: 1838812042}
+  shopController: {fileID: 1632651415}
 --- !u!1 &919868154
 GameObject:
   m_ObjectHideFlags: 0
