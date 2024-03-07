@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [System.Serializable]
@@ -29,6 +30,21 @@ public class Inventory
             this.type = item.type;
             this.icon = item.icon;
             count++;
+        }
+
+        public void RemoveItem()
+        {
+            if(count > 0)
+            {
+                count--;
+
+                if(count <= 0)
+                {
+                    count = 0;
+                    icon = null;
+                    type = CollectableType.NONE;
+                }
+            }
         }
     }
 
@@ -61,5 +77,10 @@ public class Inventory
                 return;
             }
         }
+    }
+
+    public void Remove(int index)
+    {
+        slots[index].RemoveItem();
     }
 }
