@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16bae7d8ef1145a4cb55e75942cfd177, type: 3}
   m_Name: Beetroot_Seed
   m_EditorClassIdentifier: 
-  itemName: Item Name
-  icon: {fileID: 0}
+  itemName: Beetroot Seeds
+  icon: {fileID: 21300000, guid: 8feb77eefdb11284fab2fa53b9974fcf, type: 3}

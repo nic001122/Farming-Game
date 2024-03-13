@@ -13839,8 +13839,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba598d1bd2825fc4fa74395250aadfd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectableItems:
-  - {fileID: 3475520142332282267, guid: dd51b608ce8048a498ede6d87ee66c82, type: 3}
+  items:
+  - {fileID: 5341425694853021826, guid: dd51b608ce8048a498ede6d87ee66c82, type: 3}
 --- !u!114 &1974144970
 MonoBehaviour:
   m_ObjectHideFlags: 0
