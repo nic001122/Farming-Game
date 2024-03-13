@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3475520142332282266}
   - component: {fileID: 3475520142332282267}
   - component: {fileID: -468349542459081660}
+  - component: {fileID: 5341425694853021826}
   m_Layer: 0
   m_Name: Beetroot seed
   m_TagString: Beetroot Seed
@@ -115,9 +116,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33c5e5659a4c7ea4db60225c19cd68de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 1
-  icon: {fileID: 21300000, guid: 8feb77eefdb11284fab2fa53b9974fcf, type: 3}
-  rb2d: {fileID: 0}
 --- !u!50 &-468349542459081660
 Rigidbody2D:
   serializedVersion: 4
@@ -139,3 +137,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &5341425694853021826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3475520142332282262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ccb4d436cb62469f365cacc0ae665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 1e105a9a176d2c445809bc8c5b9ae4dc, type: 2}
+  rb2d: {fileID: 0}
