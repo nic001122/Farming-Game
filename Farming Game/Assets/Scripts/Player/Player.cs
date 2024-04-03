@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField] Texture2D clickCursor;
     [SerializeField] Texture2D tappedCursor;
     Vector2 clickPos;
+    bool defaultClickSprite;
 
     private void Awake()
     {
@@ -27,6 +28,8 @@ public class Player : MonoBehaviour
 
     if(GameManager.instance.tileManager.isInteractable(cursorPosition))
     {
+        changeMouseClickPos();
+        defaultClickSprite = false;
         Cursor.SetCursor(clickCursor, clickPos, CursorMode.Auto);
         if(Input.GetKeyDown(KeyCode.F))
         {
@@ -36,9 +39,11 @@ public class Player : MonoBehaviour
 
     else
     {
+        changeMouseClickPos();
+        defaultClickSprite = true;
         Cursor.SetCursor(defaultCursor, clickPos, CursorMode.Auto);
     }
-    
+
     }
 
     public void DropItem(Item item)
@@ -50,5 +55,18 @@ public class Player : MonoBehaviour
         Item droppedItem = Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
 
         droppedItem.rb2d.AddForce(spawnOffset * 2f, ForceMode2D.Impulse);
+    }
+
+    void changeMouseClickPos()
+    {
+        if(defaultClickSprite)
+        {
+            clickPos = new Vector2(0, 0);
+        }
+
+        if(!defaultClickSprite)
+        {
+            clickPos = new Vector2(8, 0);
+        }
     }
 }
