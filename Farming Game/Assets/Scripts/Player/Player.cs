@@ -1,28 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
     public Inventory inventory;
 
+    Vector3 mousePos;
+
+    [SerializeField] Texture2D defaultCursor;
+    [SerializeField] Texture2D clickCursor;
+    [SerializeField] Texture2D tappedCursor;
+    Vector2 clickPos;
+
     private void Awake()
     {
         inventory = new Inventory(21);
+        Cursor.SetCursor(defaultCursor, clickPos, CursorMode.Auto);
     }
 
     private void Update()
     {
+    mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    Vector3Int cursorPosition = new Vector3Int((int)mousePos.x, (int)mousePos.y, 0);
+
+    if(GameManager.instance.tileManager.isInteractable(cursorPosition))
+    {
+        Cursor.SetCursor(clickCursor, clickPos, CursorMode.Auto);
         if(Input.GetKeyDown(KeyCode.F))
         {
-            Vector3Int position = new Vector3Int((int)transform.position.x, (int)transform.position.y, 0);
-
-            if(GameManager.instance.tileManager.isInteractable(position))
-            {
-                Debug.Log("Lmao");
-                GameManager.instance.tileManager.SetInteracted(position);
-            }
+            GameManager.instance.tileManager.SetInteracted(cursorPosition);
         }
+    }
+
+    else
+    {
+        Cursor.SetCursor(defaultCursor, clickPos, CursorMode.Auto);
+    }
+    
     }
 
     public void DropItem(Item item)

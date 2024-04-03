@@ -2774,6 +2774,7 @@ GameObject:
   - component: {fileID: 758507924}
   - component: {fileID: 758507922}
   - component: {fileID: 758507923}
+  - component: {fileID: 758507926}
   m_Layer: 0
   m_Name: Interactable Map
   m_TagString: Untagged
@@ -2947,6 +2948,22 @@ Transform:
   m_Father: {fileID: 2125321204}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!19719996 &758507926
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758507921}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
 --- !u!114 &767751143 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2539864302634813236, guid: e705b4ee953211943a62cba80a5cacbf, type: 3}
@@ -13077,6 +13094,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory:
     slots: []
+  defaultCursor: {fileID: 2800000, guid: 73f07499f878fbd48b28b268c03e7736, type: 3}
+  clickCursor: {fileID: 2800000, guid: cf87e9670eecc244f9164581b06f93d6, type: 3}
+  tappedCursor: {fileID: 2800000, guid: 8d9f5e9b769b5cb46a21eff559eb0c43, type: 3}
 --- !u!114 &1725366209 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2539864302634813236, guid: e705b4ee953211943a62cba80a5cacbf, type: 3}

@@ -53,27 +53,7 @@ public class ShopController : MonoBehaviour
 
         shopEnter.shopBg.transform.localScale = new Vector2 (0.5100411f, 0.1867f);
     }
-
-    public void SellBeetrootSeeds()
-    {
-        //if(beetrootSellAmount <= cntrText.beetrootSeeds && cntrText.beetrootSeeds > 0)
-        //{
-            //cntrText.beetrootSeeds -= beetrootSellAmount;
-            //cntrText.money += beetrootSellAmount * beetrootValue;
-            //notEnoughBeetrootSeedsText.SetActive(false);
-        //}
-
-        //else
-        //{
-            //notEnoughBeetrootSeedsText.SetActive(true);
-        //}
-    }
-
-    public void BuyBeetrootSeeds()
-    {
-        
-    }
-
+    
     public void Update()
     {
         beetrootSellAmount = beetrootSlider.value;
