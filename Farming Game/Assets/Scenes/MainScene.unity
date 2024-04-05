@@ -13097,6 +13097,7 @@ MonoBehaviour:
   defaultCursor: {fileID: 2800000, guid: 73f07499f878fbd48b28b268c03e7736, type: 3}
   clickCursor: {fileID: 2800000, guid: cf87e9670eecc244f9164581b06f93d6, type: 3}
   tappedCursor: {fileID: 2800000, guid: 8d9f5e9b769b5cb46a21eff559eb0c43, type: 3}
+  transparentClickCursor: {fileID: 2800000, guid: 386d2c3e6f2a94a4080a7371b959e225, type: 3}
 --- !u!114 &1725366209 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2539864302634813236, guid: e705b4ee953211943a62cba80a5cacbf, type: 3}

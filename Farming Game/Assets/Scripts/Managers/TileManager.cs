@@ -32,26 +32,31 @@ public class TileManager : MonoBehaviour
     {
         playerPos = player.transform.position;
         cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if(Input.GetKeyDown(KeyCode.T))
-        {
-            Debug.Log(Vector2.Distance(playerPos, cursorPos));
-            Debug.Log(cursorInRange());
-        }
     }
 
-    public bool isInteractable(Vector3Int position)
+    public int isInteractable(Vector3Int position)
     {
         TileBase tile = interactableMap.GetTile(position);
 
-        if(tile != null && cursorInRange())
+        if(tile != null)
         {
-            if(tile.name == "Interactable")
+            if(cursorInRange())
             {
-                return true;
+                if(tile.name == "Interactable")
+                {
+                    return 2;
+                }
+            }
+            if(!cursorInRange())
+            {
+                if(tile.name == "Interactable")
+                {
+                    return 1;
+                }
             }
         }
 
-        return false;
+        return 0;
     }
 
     public void SetInteracted(Vector3Int position)
@@ -59,7 +64,7 @@ public class TileManager : MonoBehaviour
         interactableMap.SetTile(position, interactedTile);
     }
 
-    bool cursorInRange()
+    public bool cursorInRange()
     {
         if(Vector2.Distance(playerPos, cursorPos) < 2.5 && Vector2.Distance(playerPos, cursorPos) > 0)
         {

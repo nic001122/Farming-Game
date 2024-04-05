@@ -7,18 +7,20 @@ public class Player : MonoBehaviour
 {
     public Inventory inventory;
 
+    TileManager tileManager;
+
     Vector3 mousePos;
 
     [SerializeField] Texture2D defaultCursor;
     [SerializeField] Texture2D clickCursor;
     [SerializeField] Texture2D tappedCursor;
+    [SerializeField] Texture2D transparentClickCursor;
     Vector2 clickPos;
     bool defaultClickSprite;
 
     private void Awake()
     {
         inventory = new Inventory(21);
-        Cursor.SetCursor(defaultCursor, clickPos, CursorMode.Auto);
     }
 
     private void Update()
@@ -26,7 +28,7 @@ public class Player : MonoBehaviour
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int cursorPosition = new Vector3Int((int)mousePos.x, (int)mousePos.y, 0);
 
-        if(GameManager.instance.tileManager.isInteractable(cursorPosition))
+        if(GameManager.instance.tileManager.isInteractable(cursorPosition) == 2)
         {
             changeMouseClickPos();
             defaultClickSprite = false;
@@ -37,7 +39,14 @@ public class Player : MonoBehaviour
             }
         }
 
-        else
+        if(GameManager.instance.tileManager.isInteractable(cursorPosition) == 1)
+        {
+            changeMouseClickPos();
+            defaultClickSprite = false;
+            Cursor.SetCursor(transparentClickCursor, clickPos, CursorMode.Auto);
+        }
+
+        if(GameManager.instance.tileManager.isInteractable(cursorPosition) == 0)
         {
             changeMouseClickPos();
             defaultClickSprite = true;
