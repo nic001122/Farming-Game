@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
             changeMouseClickPos();
             defaultClickSprite = false;
             Cursor.SetCursor(clickCursor, clickPos, CursorMode.Auto);
-            if(Input.GetKeyDown(KeyCode.F))
+            if(Input.GetKeyDown(KeyCode.Mouse0))
             {
                 GameManager.instance.tileManager.SetInteracted(cursorPosition);
             }
